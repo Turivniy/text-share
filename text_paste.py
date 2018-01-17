@@ -3,6 +3,19 @@ import requests
 from config import MAIN_API_URL
 
 
+# def get_paste(pasteid):
+#     """Get paste
+
+#     Args:
+#          pasteid (string): the id of the paste
+
+#     Returns:
+#          response (json): paste
+#     """
+#     get_paste_url = '{}paste/{}'.format(MAIN_API_URL, pasteid)
+#     response = requests.get(get_paste_url)
+#     return response.json()
+
 def get_paste(pasteid):
     """Get paste
 
@@ -12,8 +25,11 @@ def get_paste(pasteid):
     Returns:
          response (json): paste
     """
+
     get_paste_url = '{}paste/{}'.format(MAIN_API_URL, pasteid)
+
     response = requests.get(get_paste_url)
+
     return response.json()
 
 
@@ -94,6 +110,7 @@ def create_paste(text, **kwargs):
 
 
 if __name__ == '__main__':
-    # , title='title',  name='myname', private=0, lang='Text'
-    text = create_paste(text='ABC aaa bbb ccc', title='title',  name='myname', private=0, lang='Text')
+
+    link = create_paste(text='ABC aaa bbb ccc', title='title',  name='myname', private=0, lang='Text')
     print(text)
+
