@@ -3,42 +3,22 @@ import requests
 from config import MAIN_API_URL
 
 
-# def get_paste(pasteid):
-#     """Get paste
-
-#     Args:
-#          pasteid (string): the id of the paste
-
-#     Returns:
-#          response (json): paste
-#     """
-#     get_paste_url = '{}paste/{}'.format(MAIN_API_URL, pasteid)
-#     response = requests.get(get_paste_url)
-#     return response.json()
-
 def get_paste(pasteid):
     """Get paste
-
     Args:
          pasteid (string): the id of the paste
-
     Returns:
          response (json): paste
     """
-
     get_paste_url = '{}paste/{}'.format(MAIN_API_URL, pasteid)
-
     response = requests.get(get_paste_url)
-
     return response.json()
 
 
 def get_paste_raw_text(pasteid):
     """Get raw text paste
-
     Args:
          pasteid (string): the id of the paste
-
     Returns:
          response (string): paste string
     """
@@ -48,7 +28,6 @@ def get_paste_raw_text(pasteid):
 
 def get_random_paste():
     """Get random paste
-
     Returns:
          response (string): paste string
     """
@@ -59,10 +38,8 @@ def get_random_paste():
 
 def get_paste_id(paste_url):
     """Get raw text paste
-
     Args:
          paste_url (string): the url of the paste
-
     Returns:
          response (string): paste string
     """
@@ -83,22 +60,16 @@ def create_paste(text, **kwargs):
     """
     text='your paste text'
     The paste content. Required.
-
     title='title'
     Title for the paste.
-
     name='name'
     The author's name.
-
     private=1
     Make paste private.
-
     lang='language'
     Use get_list_available_languages() method
-
     expire='minutes'
     Set paste expiration.
-
     reply='pasteid'
     Reply to existing paste.
     """
@@ -110,7 +81,3 @@ def create_paste(text, **kwargs):
 
 
 if __name__ == '__main__':
-
-    link = create_paste(text='ABC aaa bbb ccc', title='title',  name='myname', private=0, lang='Text')
-    print(text)
-
