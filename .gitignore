@@ -1,3 +1,5 @@
 .idea/
 __pycache__/
 *.pyc
+text_paste_1.py
+test_text-share.py
