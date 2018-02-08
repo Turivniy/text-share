@@ -75,16 +75,18 @@ def tools_get_list_available_languages():
                              ' visualfoxpro, visualprolog,'
                              ' whitespace, whois, winbatch,'
                              ' xbasic, xorg_conf,'
-                             ' xpp, yaml, z80, zxbasic')
-    list_with_languages = string_with_languages.split(',')
+                             ' xpp, yaml, z80, zxbasic').split(',')
 
-    for every_language in list_with_languages:
+    tuple_with_languages =tuple(string_with_languages)
+    for every_language in tuple_with_languages:
         if every_language.strip() in keys_with_languages:
             BoolLanguages.append(True)
         else:
             BoolLanguages.append(False)
     return all(BoolLanguages)
 
+print tools_get_list_available_languages()
+         
 
 def tools_get_random_paste():
     dictionary_with_random_paste = get_random_paste()
