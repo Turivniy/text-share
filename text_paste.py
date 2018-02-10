@@ -77,7 +77,3 @@ def create_paste(text, **kwargs):
     kwargs['text'] = text
     response = requests.post(paste_url, data=kwargs)
     return response.text.replace('\n','')
-
-
-if __name__ == '__main__':
-    link = create_paste(text='ABC aaa bbb ccc', title='title',  name='myname', private=0, lang='Text')
