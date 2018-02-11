@@ -66,7 +66,7 @@ def tools_get_list_available_languages():
         else:
             BoolLanguages.append(False)
     return all(BoolLanguages)
-  
+
 
 def tools_get_random_paste():
     dictionary_with_random_paste = get_random_paste()
